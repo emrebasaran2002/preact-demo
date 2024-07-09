@@ -1,5 +1,5 @@
 import { render } from 'preact'
-import { App } from './app.tsx'
 import './index.css'
 
-render(<App />, document.getElementById('app')!)
+const root = document.getElementById('app') as HTMLDivElement
+render(<p>Hello World!</p>, root)
