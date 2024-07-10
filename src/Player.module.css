@@ -1,0 +1,50 @@
+.root {
+    flex: 0 0 auto;
+
+    /* Styling */
+    background-color: white;
+    border: 1px solid black;
+    
+    /* Layout */
+    display: flex;
+    flex-direction: row;
+    padding: 12px;
+    gap: 10px;
+}
+
+.root[selected = true] {
+    outline: 2px solid skyblue;
+    outline-offset: 2px;
+}
+
+.btn {
+    flex: 0 0 auto;
+    align-self: center;
+    width: 35px;
+    height: 35px;
+}
+
+.center {
+    flex: 1;
+    align-self: flex-start;
+
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+    gap: 3px;
+}
+
+.name {
+    flex: 0 0 auto;
+    text-align: center;
+    font: bold 13px "Verdana"; 
+    margin: 0px;
+}
+
+.score {
+    flex: 0 0 auto;
+    text-align: center;
+    font: 13px "Verdana";
+    margin: 0px;
+}
