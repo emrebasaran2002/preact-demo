@@ -4,4 +4,12 @@
     /* Styling */
     border: 1px solid darkgrey;
     background-color: white;
+
+    /* Layout */
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: center;
+
+    overflow-y: auto;
 }
