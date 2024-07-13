@@ -1,4 +1,4 @@
-import { Signal, signal } from "@preact/signals";
+import { computed, ReadonlySignal, Signal, signal } from "@preact/signals";
 
 export type Player = {
     name: string;
@@ -7,6 +7,15 @@ export type Player = {
 
 export const players: Signal<Player[]> = signal([]);
 export const selected: Signal<number | null> = signal(null);
+
+export const selectedPlayer: ReadonlySignal<Player | null> = computed(() => {
+    const index = selected.value;
+    if (index == null) {
+        return null;
+    } else {
+        return players.value[index];
+    }
+});
 
 export function addPlayer(player: Player) {
     // Add a copy of the supplied player and set it to be selected.

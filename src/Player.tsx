@@ -29,7 +29,9 @@ export function Player(props: PlayerProps) {
     return <div class={style.root} selected={State.selected.value == props.index} onClick={toggleSelect}>
         <button class={style.btn} onClick={decrementScore}>➖</button>
         <div class={style.center}>
-            <p class={style.name}>{props.name}</p>
+            <p class={style.name} style={{color: props.name == "" ? "grey" : "black"}}>
+                {props.name == "" ? "Unknown" : props.name}
+            </p>
             <p class={style.score}>{props.score}</p>
         </div>
         <button class={style.btn} onClick={incrementScore}>➕</button>
